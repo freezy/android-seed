@@ -1,8 +1,33 @@
 apply plugin: 'com.android.application'
+apply plugin: 'robolectric'
+
+dependencies {
+	compile 'com.android.support:support-v4:21.0.2'
+	compile 'com.android.support:appcompat-v7:21.0.2'
+	compile('com.google.android.gms:play-services:6.1.+') {
+		exclude module: 'support-v4'
+	}
+
+	// Testing frameworks
+	androidTestCompile 'junit:junit:4.10'
+	androidTestCompile 'com.squareup:fest-android:1.0.8'
+	androidTestCompile 'com.google.android:android:2.3.3'
+	androidTestCompile 'org.robolectric:robolectric:2.3'
+
+	// Robolectric relies on this version of v4. Locally we don't need this include, but it is required for Jenkins */
+	//noinspection GradleDependency,GradleCompatible
+	androidTestCompile 'com.android.support:support-v4:19.0.1'
+}
 
 android {
 	compileSdkVersion 21
 	buildToolsVersion "21.1.1"
+
+	sourceSets {
+		androidTest {
+			setRoot('src/androidTest')
+		}
+	}
 
 	defaultConfig {
 		applicationId "kiwi.com.merchant.app"
@@ -16,6 +41,7 @@ android {
 		sourceCompatibility JavaVersion.VERSION_1_7
 		targetCompatibility JavaVersion.VERSION_1_7
 	}
+
 	buildTypes {
 		release {
 			minifyEnabled false
@@ -24,7 +50,6 @@ android {
 	}
 }
 
-dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-	compile 'com.android.support:appcompat-v7:21.0.2'
+robolectric {
+	include '**/*Test.class'
 }
