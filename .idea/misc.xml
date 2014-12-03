@@ -3,6 +3,10 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="IdProvider" IDEtalkID="0EC55453BE3084E55FA29DB8147BCA46" />
   <component name="ProjectDictionaryState">
     <dictionary name="neh" />
   </component>
