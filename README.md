@@ -50,7 +50,9 @@ results in tests sources not being marked as such anymore (fixed in RC3).
 ## References
 
 - [almozavr/deckard-gradle](https://github.com/almozavr/deckard-gradle) (a fork
-  from robolectric/deckard-gradle) - Main inspiration for this project
+  from robolectric/deckard-gradle) - Main inspiration for this project. This
+  fork replaced the official `robolectric-gradle-plugin` by `android-unit-test`
+  from *JCAndKSolutions*.
 
 ### Other Boilerplates
 
