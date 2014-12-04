@@ -1,11 +1,11 @@
-package com.kiwi.merchant.test.instrumentation;
+package com.example.android.tests.instrumentation;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
 
 
-import com.kiwi.merchant.app.MainActivity;
-import com.kiwi.merchant.app.R;
+import com.example.android.app.MainActivity;
+import com.example.android.app.R;
 
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
 import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
@@ -18,7 +18,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	@SuppressWarnings("deprecation")
 	public MainActivityTest() {
 		// This constructor was deprecated - but we want to support lower API levels.
-		super("com.kiwi.merchant.app", MainActivity.class);
+		super("com.example.android.app", MainActivity.class);
 	}
 	@Override
 	public void setUp() throws Exception {

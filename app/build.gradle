@@ -6,7 +6,7 @@ android {
 	buildToolsVersion "21.1.1"
 
 	defaultConfig {
-		applicationId "com.kiwi.merchant.app"
+		applicationId "com.example.android.app"
 
 		minSdkVersion 10
 		targetSdkVersion 21

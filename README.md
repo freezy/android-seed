@@ -75,8 +75,7 @@ For Espresso/instrumentation tests, type (at least one device/emulator should be
 
 ## Tests
 
-Obviously stuff doesn't work out of the box (hence this project). Explanations
-see below.
+Obviously stuff didn't work out of the box (hence this project). Explanations see below.
 
 ### Robolectric
 

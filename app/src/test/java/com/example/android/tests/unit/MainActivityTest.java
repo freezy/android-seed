@@ -1,8 +1,8 @@
-package com.kiwi.merchant.test.unit;
+package com.example.android.tests.unit;
 
 import android.app.Activity;
 
-import com.kiwi.merchant.app.MainActivity;
+import com.example.android.app.MainActivity;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
