@@ -30,7 +30,9 @@ A fresh Android project with tests already set up.
 *Note that of the time of writing, v1.0-RC3 is not released and you should use v1.0-RC1.*
 
 1. Open *Settings*, *Plugins*, *Browse Repositories* and install *Android Studio Unit Test*
-2. Import the project as a Gradle project.
+2. Import the project as a Gradle project. This can take a while. Specially downloading 30 megs of
+   Gradle binaries usually takes 30 minutes (Gradle, CDN, please!). Once that's done, it downloads
+   all the deps on first run. This is usually faster.
 3. Open *Run Configurations*, click on *Defaults*, *Android Tests* and put `com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner`
    as the instrumentation runner (pro tip: click browse and type *GITR*). This makes Android Studio
    use the Espresso runner instead of the default one.
@@ -64,6 +66,7 @@ For Espresso/instrumentation tests, type (at least one device/emulator should be
 
     - You didn't install the [plugin][android-studio-unit-test-plugin] mentioned above.
     - You're using Android Studio RC2 which has [this bug][android-studio-bug].
+    - You haven't run any Gradle build yet. Open the Gradle panel and click on the refresh icon.
 
 - Also if it complains about JUnit 3.8, that means that the class path is screwed up (JUnit 4.11
   should have come first), something the plugin above is supposed to take care of.
