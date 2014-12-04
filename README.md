@@ -15,7 +15,7 @@ A fresh Android project with tests already set up.
 ## Versions
 
 - Android 21 (5.0 Lollipop), with compatiblity back to 10 (2.3.3 Gingerbread)
-- Android Studio 1.0-RC2
+- Android Studio 1.0-RC1
 - Gradle 2.2
 
 
@@ -25,7 +25,55 @@ A fresh Android project with tests already set up.
 - [Butter Knife][butterknife] for view injections
 
 
-## Notes
+## Android Studio Setup
+
+*Note that of the time of writing, v1.0-RC3 is not released and you should use v1.0-RC1.*
+
+1. Open *Settings*, *Plugins*, *Browse Repositories* and install *Android Studio Unit Test*
+2. Import the project as a Gradle project.
+3. Open *Run Configurations*, click on *Defaults*, *Android Tests* and put `com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner`
+   as the instrumentation runner (pro tip: click browse and type *GITR*). This makes Android Studio
+   use the Espresso runner instead of the default one.
+4. For the Robolectric tests, create a new **JUnit** configuration, name it *Robolectric* and put the
+   following:
+
+   - Test kind: *All in package*
+   - Package: `com.example.tests.unit`
+   - Search for tests: *In single module*
+   - Working directory: `$MODULE_DIR$`
+
+You should now be able to run tests by right-clicking on the test method. Be sure to choose JUnit
+for the Robolectric tests and Android test for the instrumentation tests. You can also run the tests
+from the console.
+
+For Robolectric/unit tests, type:
+
+	./gradlew test
+
+For Espresso/instrumentation tests, type (at least one device/emulator should be connected via ADB):
+
+	./gradlew connectedAndroidTest
+
+### Notes
+
+- Make sure you use Java 1.7 (x64), and that your `JAVA_HOME` is set to that folder. I had problems
+  with Java 8.
+- If Android Studio doesn't put your Robolectric tests on a greenish background in the project view,
+  that means it didn't recognize it as test source and you can't select the right package when
+  creating the JUnit run configuration. This can happen if:
+
+    - You didn't install the [plugin][android-studio-unit-test-plugin] mentioned above.
+    - You're using Android Studio RC2 which has [this bug][android-studio-bug].
+
+- Also if it complains about JUnit 3.8, that means that the class path is screwed up (JUnit 4.11
+  should have come first), something the plugin above is supposed to take care of.
+- If you're getting an exception about your test class not being found, verify it's a Robolectric
+  tests class and not an Espresso test. Fix the package of the JUnit run configuration if that's the
+  case.
+- There's no need for an additional `testClasses` pre-launch when running Robolectric tests, that's
+  already configured in the Gradle file.
+
+## Tests
 
 Obviously stuff doesn't work out of the box (hence this project). Explanations
 see below.
@@ -45,10 +93,10 @@ The [problem](https://github.com/robolectric/robolectric-gradle-plugin/issues/10
 with the offical plugin is that it uses the existing `androidTest` source
 folder, which makes separation between unit tests and functional tests
 impossible. The last plugin has the advantage of [better Android Studio
-Integration](https://github.com/evant/android-studio-unit-test-plugin) as well.
+Integration][android-studio-unit-test-plugin] as well.
 
-However, [a bug in Android Studio RC2](https://code.google.com/p/android/issues/detail?id=81364)
-results in tests sources not being marked as such anymore (fixed in RC3).
+However, [a bug in Android Studio RC2][android-studio-bug] results in tests sources not being marked
+as such anymore (fixed in RC3).
 
 ### Espresso
 
@@ -83,3 +131,5 @@ For this reason, the Espresso reference points to my [patched version](https://g
 [espresso]: https://code.google.com/p/android-test-kit/wiki/Espresso
 [dagger]: http://square.github.io/dagger/
 [butterknife]: http://jakewharton.github.io/butterknife/
+[android-studio-unit-test-plugin]: https://github.com/evant/android-studio-unit-test-plugin
+[android-studio-bug]: https://code.google.com/p/android/issues/detail?id=81364
