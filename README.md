@@ -2,6 +2,7 @@
 
 A fresh Android project with tests already set up.
 
+
 ## Features
 
 - Loads nicely in [Android Studio][android-studio]
@@ -9,6 +10,7 @@ A fresh Android project with tests already set up.
 - [Espresso][espresso] tests working and debuggable in IDE (for functional testing)
 - Latest Lollipop compat libs ready to use
 - Test coverage enabled
+
 
 ## Versions
 
@@ -58,6 +60,10 @@ namely:
 - Works well with [Spoon](http://square.github.io/spoon/)
 - Fluent API
 - Well synchronized with app's UI thread (no `Thread.sleep()` necessary)
+
+Currently, Espresso needs to be patched to [work well with Lollipop](https://code.google.com/p/android-test-kit/issues/detail?id=84).
+For this reason, the Espresso reference points to my [patched version](https://github.com/freezy/double-espresso).
+
 
 ## References
 
