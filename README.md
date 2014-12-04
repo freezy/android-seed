@@ -36,16 +36,28 @@ needed in order to make it part of the build. There are several:
 - [robolectric/robolectric-gradle-plugin](https://github.com/robolectric/robolectric-gradle-plugin) -
   A plugin by the Robolectric team.
 - [novoda/gradle-android-test-plugin](https://github.com/novoda/gradle-android-test-plugin)
-- **[JCAndKSolutions/android-unit-test](https://github.com/JCAndKSolutions/android-unit-test)**
+- **[JCAndKSolutions/android-unit-test](https://github.com/JCAndKSolutions/android-unit-test)** -
+  The one used by this seed.
 
 The [problem](https://github.com/robolectric/robolectric-gradle-plugin/issues/107)
 with the offical plugin is that it uses the existing `androidTest` source
-folder, which makes separation bewteen unit tests and functional tests
+folder, which makes separation between unit tests and functional tests
 impossible. The last plugin has the advantage of [better Android Studio
 Integration](https://github.com/evant/android-studio-unit-test-plugin) as well.
 
 However, [a bug in Android Studio RC2](https://code.google.com/p/android/issues/detail?id=81364)
 results in tests sources not being marked as such anymore (fixed in RC3).
+
+### Espresso
+
+The Espresso stack has a few advantages over other tools (Robotium, Selendroid, UIAutomator...),
+namely:
+
+- Gradle support
+- Android Studio support
+- Works well with [Spoon](http://square.github.io/spoon/)
+- Fluent API
+- Well synchronized with app's UI thread (no `Thread.sleep()` necessary)
 
 ## References
 

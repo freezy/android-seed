@@ -1,4 +1,4 @@
-package com.kiwi.merchant.test;
+package com.kiwi.merchant.app;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -18,7 +18,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	@SuppressWarnings("deprecation")
 	public MainActivityTest() {
 		// This constructor was deprecated - but we want to support lower API levels.
-		super("com.kiwi.merchant.test", MainActivity.class);
+		super("com.kiwi.merchant.app", MainActivity.class);
 	}
 	@Override
 	public void setUp() throws Exception {
@@ -29,6 +29,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 	public void testCheckText() {
 		onView(withId(R.id.text))
-				.check(matches(withText("Hello World!")));
+				.check(matches(withText("Hello world!")));
 	}
 }

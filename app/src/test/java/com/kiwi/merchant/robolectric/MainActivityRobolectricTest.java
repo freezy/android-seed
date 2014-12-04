@@ -1,12 +1,15 @@
 package com.kiwi.merchant.robolectric;
 
 import android.app.Activity;
+import android.widget.TextView;
+
+import com.kiwi.merchant.app.MainActivity;
+import com.kiwi.merchant.app.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
 import com.kiwi.merchant.app.MainActivity;
 

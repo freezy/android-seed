@@ -75,8 +75,8 @@ dependencies {
 	androidTestCompile 'org.hamcrest:hamcrest-core:1.1'
 	androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
 	androidTestCompile 'org.hamcrest:hamcrest-integration:1.1'
-	androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r3'
-	androidTestCompile('com.jakewharton.espresso:espresso-support-v4:1.1-r3') {
+	androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r4-patched'
+	androidTestCompile('com.jakewharton.espresso:espresso-support-v4:1.1-r4-patched') {
 		exclude group:'com.android.support'
 		exclude module:'support-v4'
 	}
