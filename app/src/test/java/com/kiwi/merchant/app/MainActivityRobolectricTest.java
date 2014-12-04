@@ -1,19 +1,13 @@
-package com.kiwi.merchant.robolectric;
+package com.kiwi.merchant.app;
 
 import android.app.Activity;
-import android.widget.TextView;
-
-import com.kiwi.merchant.app.MainActivity;
-import com.kiwi.merchant.app.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 
-import com.kiwi.merchant.app.MainActivity;
-
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
 public class MainActivityRobolectricTest {
