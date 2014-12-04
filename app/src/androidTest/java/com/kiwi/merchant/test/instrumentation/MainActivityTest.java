@@ -1,4 +1,4 @@
-package com.kiwi.merchant.app;
+package com.kiwi.merchant.test.instrumentation;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
