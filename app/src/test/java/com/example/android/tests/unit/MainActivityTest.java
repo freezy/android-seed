@@ -1,8 +1,10 @@
 package com.example.android.tests.unit;
 
 import android.app.Activity;
+import android.widget.TextView;
 
 import com.example.android.app.MainActivity;
+import com.example.android.app.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,11 +21,13 @@ public class MainActivityTest {
 
 	@Test
 	public void testSomething() throws Exception {
-		final Activity activity = Robolectric.buildActivity(MainActivity.class).create().visible().get();
+		final Activity activity = Robolectric.buildActivity(MainActivity.class).create().start().resume().visible().get();
 		assertThat(activity, is(notNullValue()));
 
-//		final TextView textView = (TextView) activity.findViewById(R.id.hello_world);
-//		final CharSequence text = textView.getText();
-//		assertThat(text.toString(), equalTo("Hello world!"));
+		final TextView textView = (TextView) activity.findViewById(R.id.hello_world);
+		assertThat(textView, is(notNullValue()));
+
+		final CharSequence text = textView.getText();
+		assertThat(text.toString(), equalTo("Hello world!"));
 	}
 }
