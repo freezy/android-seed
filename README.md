@@ -75,8 +75,6 @@ For Espresso/instrumentation tests, type (at least one device/emulator should be
 - If you're getting an exception about your test class not being found, verify it's a Robolectric
   tests class and not an Espresso test. Fix the package of the JUnit run configuration if that's the
   case.
-- There's no need for an additional `testClasses` pre-launch when running Robolectric tests, that's
-  already configured in the Gradle file.
 
 ## Tests
 
