@@ -9,13 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-//public class MainActivity extends Activity {
-//	@Override
-//	protected void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		setContentView(R.layout.deckard);
-//	}
-//}
 public class MainActivity extends ActionBarActivity {
 
 	@Override

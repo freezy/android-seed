@@ -28,7 +28,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	}
 
 	public void testCheckText() {
-		onView(withId(R.id.text))
+		onView(withId(R.id.hello_world))
 				.check(matches(withText("Hello world!")));
 	}
 }

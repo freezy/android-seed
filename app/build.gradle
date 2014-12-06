@@ -41,14 +41,16 @@ androidUnitTest {
 }
 
 dependencies {
+
+	// app
 	compile 'com.android.support:support-v4:21.0.2'
 	compile 'com.android.support:appcompat-v7:21.0.2'
 	compile('com.google.android.gms:play-services:6.1.+') {
 		exclude module: 'support-v4'
 	}
-	testCompile 'junit:junit:4.11'
 
 	// robolectric
+	testCompile 'junit:junit:4.11'
 	testCompile 'org.mockito:mockito-core:1.9.5'
 	testCompile 'com.squareup:fest-android:1.0.8'
 	testCompile('org.robolectric:robolectric:2.4') {
