@@ -15,7 +15,7 @@ A fresh Android project with tests already set up.
 ## Versions
 
 - Android 21 (5.0 Lollipop), with compatiblity back to 10 (2.3.3 Gingerbread)
-- Android Studio 1.0-RC1
+- Android Studio 1.0-RC4
 - Gradle 2.2
 
 
@@ -26,8 +26,6 @@ A fresh Android project with tests already set up.
 
 
 ## Android Studio Setup
-
-*Note that of the time of writing, v1.0-RC3 is not released and you should use v1.0-RC1.*
 
 1. Open *Settings*, *Plugins*, *Browse Repositories* and install *Android Studio Unit Test*
 2. Import the project as a Gradle project. This can take a while. Specially downloading 30 megs of
@@ -43,6 +41,10 @@ A fresh Android project with tests already set up.
    - Package: `com.example.tests.unit`
    - Search for tests: *In single module*
    - Working directory: `$MODULE_DIR$`
+
+   Also create a new *Gradle Configuration* that runs `testDebug` and reference it under the *Before
+   launch* section (also a `testClasses` is automatically added by the Android Studio plugin, but it
+   only compiles test classes and not the resources).
 
 You should now be able to run tests by right-clicking on the test method. Be sure to choose JUnit
 for the Robolectric tests and Android test for the instrumentation tests. You can also run the tests
@@ -96,9 +98,6 @@ with the offical plugin is that it uses the existing `androidTest` source
 folder, which makes separation between unit tests and functional tests
 impossible. The last plugin has the advantage of [better Android Studio
 Integration][android-studio-unit-test-plugin] as well.
-
-However, [a bug in Android Studio RC2][android-studio-bug] results in tests sources not being marked
-as such anymore (fixed in RC3).
 
 ### Espresso
 
