@@ -54,6 +54,10 @@ For Robolectric/unit tests, type:
 
 	./gradlew test
 
+Or, if you want to generate a test coverage report:
+
+	./gradlew jacocoTestReport
+
 For Espresso/instrumentation tests, type (at least one device/emulator should be connected via ADB):
 
 	./gradlew connectedAndroidTest
