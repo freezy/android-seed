@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<!-- Base application theme. -->
-	<style name="AppTheme" parent="Theme.AppCompat.Light">
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
 		<!-- ================================== TOOLBAR PROPS ================================= -->
 
@@ -16,6 +16,7 @@
 		<item name="colorPrimary">@color/primaryColor</item>
 		<!-- bg color of the lower part of the toolbar -->
 		<item name="colorPrimaryDark">@color/primaryColorDark</item>
+		<item name="android:statusBarColor">@color/primaryColorDark</item>
 		<!-- color of the title text in the Toolbar, in the Theme.AppCompat theme  -->
 		<item name="android:textColorPrimary">@color/primaryColorText</item>
 		<!-- color of the menu overflow icon (three vertical dots) -->
