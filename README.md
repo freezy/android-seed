@@ -15,7 +15,7 @@ A fresh Android project with tests already set up.
 ## Versions
 
 - Android 21 (5.0 Lollipop), with compatiblity back to 10 (2.3.3 Gingerbread)
-- Android Studio 1.0-RC4
+- Android Studio 1.0
 - Gradle 2.2
 
 
@@ -129,7 +129,7 @@ For this reason, the Espresso reference points to my [patched version](https://g
 - [mlidal/android-gradle-test](https://github.com/mlidal/android-gradle-test)
 - [fada21/android-tdd-bootstrap](https://github.com/fada21/android-tdd-bootstrap)
 
-[android-studio]: http://tools.android.com/download/studio/canary/latest
+[android-studio]: http://tools.android.com/download/studio
 [robolectric]: http://robolectric.org/
 [espresso]: https://code.google.com/p/android-test-kit/wiki/Espresso
 [dagger]: http://square.github.io/dagger/
