@@ -18,6 +18,7 @@ A fresh Android project with tests already set up.
 - Android Studio 1.0
 - Gradle 2.2
 - Build Tools 21.1.2
+- Appcompat-v7 21.0.3
 
 
 ## Included libs
@@ -32,8 +33,8 @@ A fresh Android project with tests already set up.
 2. Import the project as a Gradle project. This can take a while. Specially downloading 30 megs of
    Gradle binaries usually takes 30 minutes (Gradle, CDN, please!). Once that's done, it downloads
    all the deps on first run. This is usually faster.
-3. Open *Run Configurations*, click on *Defaults*, *Android Tests* and put `com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner`
-   as the instrumentation runner (pro tip: click browse and type *GITR*). This makes Android Studio
+3. Open *Run Configurations*, click on *Defaults*, *Android Tests* and put `android.support.test.runner.AndroidJUnitRunner`
+   as the instrumentation runner (pro tip: click browse and type *ajr*). This makes Android Studio
    use the Espresso runner instead of the default one.
 4. For the Robolectric tests, create a new **JUnit** configuration, name it *Robolectric* and put the
    following:
@@ -48,8 +49,8 @@ A fresh Android project with tests already set up.
    only compiles test classes and not the resources).
 
 You should now be able to run tests by right-clicking on the test method. Be sure to choose JUnit
-for the Robolectric tests and Android test for the instrumentation tests. You can also run the tests
-from the console.
+for the Robolectric tests and Android test for the Espresso tests. You can also run the tests from
+the console.
 
 For Robolectric/unit tests, type:
 
@@ -113,9 +114,7 @@ namely:
 - Fluent API
 - Well synchronized with app's UI thread (no `Thread.sleep()` necessary)
 
-Currently, Espresso needs to be patched to [work well with Lollipop](https://code.google.com/p/android-test-kit/issues/detail?id=84).
-For this reason, the Espresso reference points to my [patched version](https://github.com/freezy/double-espresso).
-
+Espresso is now officially part of Google's tool chain.
 
 ## References
 

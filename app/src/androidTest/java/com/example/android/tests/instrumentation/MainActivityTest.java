@@ -7,10 +7,11 @@ import android.test.suitebuilder.annotation.LargeTest;
 import com.example.android.app.MainActivity;
 import com.example.android.app.R;
 
-import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
-import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withId;
-import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.withText;
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+
 
 @LargeTest
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
@@ -31,4 +32,5 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		onView(withId(R.id.hello_world))
 				.check(matches(withText("Hello world!")));
 	}
+
 }

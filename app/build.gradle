@@ -14,7 +14,8 @@ android {
 		versionCode 1
 		versionName "0.0.1-SNAPSHOT"
 
-		testInstrumentationRunner "com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner"
+		// that's for espresso.
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 		multiDexEnabled true
 	}
 
@@ -46,8 +47,9 @@ androidUnitTest {
 dependencies {
 
 	// app
-	compile 'com.android.support:support-v4:21.0.2'
-	compile 'com.android.support:appcompat-v7:21.0.2'
+	compile 'com.android.support:support-annotations:21.0.3'
+	compile 'com.android.support:support-v4:21.0.3'
+	compile 'com.android.support:appcompat-v7:21.0.3'
 	compile('com.google.android.gms:play-services:6.1.+') {
 		exclude module: 'support-v4'
 	}
@@ -59,16 +61,11 @@ dependencies {
 	testCompile 'org.robolectric:robolectric:2.4'
 
 	// espresso
-	androidTestCompile 'com.google.guava:guava:16.0'
-	androidTestCompile 'com.squareup.dagger:dagger:1.2.1'
 	androidTestCompile 'org.hamcrest:hamcrest-core:1.1'
 	androidTestCompile 'org.hamcrest:hamcrest-library:1.1'
 	androidTestCompile 'org.hamcrest:hamcrest-integration:1.1'
-	androidTestCompile 'com.jakewharton.espresso:espresso:1.1-r4-patched'
-	androidTestCompile('com.jakewharton.espresso:espresso-support-v4:1.1-r4-patched') {
-		exclude group: 'com.android.support'
-		exclude module: 'support-v4'
-	}
+	androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+	androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
 }
 
 
