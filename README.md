@@ -17,6 +17,7 @@ A fresh Android project with tests already set up.
 - Android 21 (5.0 Lollipop), with compatiblity back to 10 (2.3.3 Gingerbread)
 - Android Studio 1.0
 - Gradle 2.2
+- Build Tools 21.1.2
 
 
 ## Included libs
