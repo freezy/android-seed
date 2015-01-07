@@ -103,6 +103,9 @@ folder, which makes separation between unit tests and functional tests
 impossible. The last plugin has the advantage of [better Android Studio
 Integration][android-studio-unit-test-plugin] as well.
 
+Note that Robolectric is currently [broken][robolectric-1424] due to
+[issues with appcompat-v7][robolectric-1446].
+
 ### Espresso
 
 The Espresso stack has a few advantages over other tools (Robotium, Selendroid, UIAutomator...),
@@ -136,3 +139,5 @@ Espresso is now officially part of Google's tool chain.
 [butterknife]: http://jakewharton.github.io/butterknife/
 [android-studio-unit-test-plugin]: https://github.com/evant/android-studio-unit-test-plugin
 [android-studio-bug]: https://code.google.com/p/android/issues/detail?id=81364
+[robolectric-1424]: https://github.com/robolectric/robolectric/issues/1424
+[robolectric-1446]: https://github.com/robolectric/robolectric/issues/1446
