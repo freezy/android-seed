@@ -21,6 +21,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		// This constructor was deprecated - but we want to support lower API levels.
 		super("com.example.android.app", MainActivity.class);
 	}
+
+
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();

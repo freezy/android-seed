@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
 
-	compileSdkVersion 21
-	buildToolsVersion "21.1.2"
+	compileSdkVersion 22
+	buildToolsVersion "22.0.1"
 
 	defaultConfig {
 		applicationId "com.example.android.app"
 
 		minSdkVersion 10
-		targetSdkVersion 21
+		targetSdkVersion 22
 
 		versionCode 1
 		versionName "0.0.1-SNAPSHOT"
@@ -17,13 +17,6 @@ android {
 		// that's for espresso.
 		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 		multiDexEnabled true
-	}
-
-	buildTypes {
-		debug {
-			debuggable true
-			testCoverageEnabled = true
-		}
 	}
 
 	packagingOptions {
@@ -34,31 +27,25 @@ android {
 	}
 }
 
-
-apply plugin: 'android-unit-test'
-
-androidUnitTest {
-	downloadDependenciesSources true
-	downloadDependenciesJavadoc true
-	downloadTestDependenciesSources true
-	downloadTestDependenciesJavadoc true
-}
-
 dependencies {
 
 	// app
-	compile 'com.android.support:support-annotations:21.0.3'
-	compile 'com.android.support:support-v4:21.0.3'
-	compile 'com.android.support:appcompat-v7:21.0.3'
-	compile('com.google.android.gms:play-services:6.1.+') {
+	compile 'com.android.support:support-annotations:22.0.0'
+	compile 'com.android.support:support-v4:22.0.0'
+	compile 'com.android.support:appcompat-v7:22.0.0'
+	compile('com.google.android.gms:play-services:7.+') {
 		exclude module: 'support-v4'
 	}
+	provided 'com.squareup.dagger:dagger-compiler:1.2.2'
+	compile 'com.squareup.dagger:dagger:1.2.2'
+	compile 'de.greenrobot:eventbus:2.4.0'
+
 
 	// robolectric
-	testCompile 'junit:junit:4.11'
-	testCompile 'org.mockito:mockito-core:1.9.5'
+	testCompile 'junit:junit:4.12'
+	testCompile "org.mockito:mockito-core:1.9.5"
 	testCompile 'com.squareup:fest-android:1.0.8'
-	testCompile 'org.robolectric:robolectric:2.4'
+	testCompile "org.robolectric:robolectric:3.0-rc2"
 
 	// espresso
 	androidTestCompile 'org.hamcrest:hamcrest-core:1.1'

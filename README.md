@@ -14,11 +14,11 @@ A fresh Android project with tests already set up.
 
 ## Versions
 
-- Android 21 (5.0 Lollipop), with compatiblity back to 10 (2.3.3 Gingerbread)
-- Android Studio 1.0
+- Android 22 (5.0 Lollipop), with compatibility back to 10 (2.3.3 Gingerbread)
+- Android Studio 1.2
 - Gradle 2.2
-- Build Tools 21.1.2
-- Appcompat-v7 21.0.3
+- Build Tools 22.0.1
+- Appcompat-v7 22.0.0
 
 
 ## Included libs
