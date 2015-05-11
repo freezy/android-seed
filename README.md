@@ -36,6 +36,10 @@ on the bottom left side).
 For Robolectric, choose "Unit Tests", then open a test class and right-click on
 what you want to run.
 
+For Espresso, do the same while "Android Instrumentation Tests" is selected in
+the Build Variants.
+
+
 ### Other Boilerplates
 
 - [nenick/android-gradle-template](https://github.com/nenick/android-gradle-template)
