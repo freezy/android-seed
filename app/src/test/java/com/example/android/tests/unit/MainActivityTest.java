@@ -1,9 +1,8 @@
 package com.example.android.tests.unit;
 
-import android.app.Activity;
-import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.android.app.BuildConfig;
 import com.example.android.app.MainActivity;
 import com.example.android.app.R;
 
@@ -11,22 +10,23 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
-import org.robolectric.tester.android.view.TestMenuItem;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertThat;
 
-@Config(emulateSdk=18, reportSdk=18)
-@RunWith(RobolectricTestRunner.class)
+@Config(emulateSdk=21, reportSdk=21, constants=BuildConfig.class)
+@RunWith(RobolectricGradleTestRunner.class)
 public class MainActivityTest {
 
 	private MainActivity activity;
 
 	@Before
 	public void setUp() throws Exception {
-		activity = Robolectric.buildActivity(MainActivity.class).create().start().resume().visible().get();
+		activity = Robolectric.setupActivity(MainActivity.class);
 		assertThat(activity, is(notNullValue()));
 	}
 
@@ -38,11 +38,5 @@ public class MainActivityTest {
 
 		final CharSequence text = textView.getText();
 		assertThat(text.toString(), equalTo("Hello world!"));
-	}
-
-	@Test
-	public void settingsMenuShouldBeClickable() throws Exception {
-		MenuItem item = new TestMenuItem(R.id.action_settings);
-		activity.onOptionsItemSelected(item);
 	}
 }
