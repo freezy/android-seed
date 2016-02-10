@@ -8,17 +8,17 @@ A fresh Android project with tests already set up.
 - Loads nicely in [Android Studio][android-studio]
 - [Robolectric][robolectric] tests working and debuggable in IDE (for unit testing)
 - [Espresso][espresso] tests working and debuggable in IDE (for functional testing)
-- Latest Lollipop compat libs ready to use
+- Latest Marshmallow compat libs ready to use
 - Test coverage enabled
 
 
 ## Versions
 
-- Android 22 (5.0 Lollipop), with compatibility back to 10 (2.3.3 Gingerbread)
-- Android Studio 1.2
-- Gradle 2.2
-- Build Tools 22.0.1
-- Appcompat-v7 22.0.0
+- Android 23 (6.0 Marshmallow), with compatibility back to 10 (2.3.3 Gingerbread)
+- Android Studio 1.5
+- Gradle 2.9
+- Build Tools 23.0.2
+- Appcompat-v7 23.1.1
 
 
 ## Included libs
