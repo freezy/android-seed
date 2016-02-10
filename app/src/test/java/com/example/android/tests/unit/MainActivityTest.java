@@ -18,7 +18,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
-@Config(emulateSdk=21, reportSdk=21, constants=BuildConfig.class)
+@Config(sdk=21, constants=BuildConfig.class)
 @RunWith(RobolectricGradleTestRunner.class)
 public class MainActivityTest {
 

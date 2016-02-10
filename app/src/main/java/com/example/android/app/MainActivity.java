@@ -2,10 +2,10 @@ package com.example.android.app;
 
 import android.content.res.Configuration;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,11 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
 
-	private Toolbar toolbar;
-	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle drawerToggle;
 
 
@@ -26,8 +24,8 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		toolbar = (Toolbar) findViewById(R.id.toolbar);
-		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		if (toolbar != null) {
 			toolbar.setTitle(R.string.app_name);
 			setSupportActionBar(toolbar);
